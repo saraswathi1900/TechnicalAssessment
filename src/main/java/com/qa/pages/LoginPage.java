@@ -85,27 +85,19 @@ public class LoginPage extends TestBase{
 	public void fillForm() throws InterruptedException{
 		retirementage.sendKeys("68");
 		currentage.sendKeys("40");
-		Thread.sleep(2000);
 		currentincome.click();
 		currentincome.sendKeys("100000");
-		Thread.sleep(2000);
 		currentsavings.click();
 		currentsavings.sendKeys("500000");
-		Thread.sleep(2000);
-
 		currentsavingseachyear.sendKeys("10");
 		savingsincreaserate.sendKeys(".25");
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();", yessocialbenefits);
-
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();", marriedyes);
 		socialsecurityoverride.sendKeys("4000");
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();", adjustdefaultvalueslink);
-
-		//adjustdefaultvalueslink.click();
 		additionalincome.sendKeys("500");
 		retirementduration.sendKeys("20");
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();", includeinflationyes);
-		//expectedinflationrate.sendKeys(null);
 		retirmentannualincome.sendKeys("75");
 		preretirementroi.sendKeys("8");
 		postretirementroi.sendKeys("5");
@@ -119,15 +111,5 @@ public class LoginPage extends TestBase{
 	public boolean validateResults(){
 		return results.isDisplayed();
 	}
-//	
-//	public HomePage login(String un, String pwd){
-//		username.sendKeys(un);
-//		password.sendKeys(pwd);
-//		//loginBtn.click();
-//		    	JavascriptExecutor js = (JavascriptExecutor)driver;
-//		    	js.executeScript("arguments[0].click();", loginBtn);
-//		    	
-//		return new HomePage();
-	}
-	
+}
 
